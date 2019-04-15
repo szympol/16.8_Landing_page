@@ -1,0 +1,23 @@
+@import "variables";
+@import "mixins";
+@import "normalize";
+@import "layout";
+
+/* Components */
+/* @import "components/main";
+@import "components/navbar";
+@import "components/topbar"; */
+
+/* Sections */
+//@import "sections/registration_form";
+
+* {
+  box-sizing: border-box;
+  //    font-family: $default-font;
+  line-height: 1.42857143;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 100%;
+}

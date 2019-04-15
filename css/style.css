@@ -1,0 +1,14 @@
+/* Components */
+/* @import "components/main";
+@import "components/navbar";
+@import "components/topbar"; */
+/* Sections */
+* {
+  box-sizing: border-box;
+  line-height: 1.42857143;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 100%;
+}
