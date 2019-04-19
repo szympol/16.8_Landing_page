@@ -20,7 +20,8 @@
     "format": "prettier --write \"src/**/*.{js,html,scss}\"",
     "lint": "eslint js/",
     "watch": "npm-run-all build -p watch:*",
-    "watch:sassprefixer": "onchange -d 100 sass/*.scss -- npm-run-all -p build:sass build:autoprefixer build:code-quality build:babel",
+    "watch:sassprefixer": "onchange -d 100 src/sass/*.scss -- npm-run-all -p build:sass build:autoprefixer format",
+    "watch:es6": "onchange -d 100 src/js/*.js -- npm-run-all -p build:babel format",
     "watch:browsersync": "browser-sync start --server --files css/*.css *.html js/*.js"
   },
   "husky": {

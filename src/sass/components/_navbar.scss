@@ -1,0 +1,35 @@
+.navbar {
+  background-color: $background1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: $menu-font-size;
+  .navbar-wrapper {
+    min-height: 5em;
+    display: flex;
+    width: 100%;
+    max-width: 1170px;
+    justify-content: space-between;
+    align-items: center;
+    .navbar-logo {
+      background-image: url("../src/images/Logo.png");
+      background-size: cover;
+      width: 50px;
+      height: 51px;
+      margin-left: 30px;
+    }
+    .navbar-sections {
+      list-style-type: none;
+      margin: 0;
+      color: $color2;
+      > li {
+        display: inline-flex;
+        padding-left: 15px;
+      }
+      > li:last-of-type {
+        padding-right: 30px;
+      }
+    }
+  }
+}
