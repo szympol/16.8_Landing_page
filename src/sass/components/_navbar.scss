@@ -24,10 +24,27 @@
       list-style-type: none;
       margin: 0;
       padding: 0;
-      color: $color2;
+      &--active {
+        border-bottom: 5px solid $color4 !important;
+        margin-top: 5px;
+      }
       > li {
         display: inline-flex;
-        padding-left: 15px;
+        padding: 0 7.5px;
+        min-height: 80px;
+        align-items: center;
+        position: relative;
+        border-bottom: 5px solid transparent;
+        margin-top: 5px;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        &:hover {
+          border-bottom: 5px solid $color4;
+        }
+        a {
+          text-decoration: none;
+          color: $color2;
+        }
       }
       > li:last-of-type {
         padding-right: 30px;
@@ -38,6 +55,14 @@
         margin-top: 20px;
         justify-items: stretch;
         width: 100%;
+        align-items: center;
+        > li {
+          padding: 7.5px 0;
+          min-height: auto;
+        }
+        > li:last-of-type {
+          padding-right: 0;
+        }
       }
     }
     &--mobile {

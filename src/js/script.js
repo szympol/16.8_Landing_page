@@ -1,12 +1,13 @@
 'use strict';
+import '@babel/polyfill';
 
 // variables
 const menu = document.querySelector('.hamburger');
 const navbarWrapper = document.getElementById('navbar-wrapper');
 const navbarSections = document.getElementById('navbar-sections');
+const navbarSectionsElements = navbarSections.querySelectorAll('li');
 
 const classesNavbarWrapper = navbarWrapper.classList;
-
 let ifHasNavbarWrapperForMobileView;
 
 // toggle menu on mobile viewport
@@ -51,11 +52,24 @@ window.addEventListener(
   'resize',
   function () {
     setViewportWidth();
-    if (viewportWidth > 768 && ifHasNavbarWrapperForMobileView) {
-      removeMobileToggle();
-    } else {
-      return false;
-    }
+    // eslint-disable-next-line no-unused-expressions
+    viewportWidth > 768 && ifHasNavbarWrapperForMobileView
+      ? removeMobileToggle()
+      : false;
   },
   false
 );
+
+// active element in the menu
+let sortNavbarSectionsElements = () => {
+  for (let element of navbarSectionsElements) {
+    element.classList.remove('navbar-sections--active');
+  }
+};
+
+for (let i = 0; i < navbarSectionsElements.length; i++) {
+  navbarSectionsElements[i].addEventListener('click', function () {
+    sortNavbarSectionsElements();
+    navbarSectionsElements[i].classList.add('navbar-sections--active');
+  });
+}

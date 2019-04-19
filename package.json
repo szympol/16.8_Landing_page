@@ -16,7 +16,7 @@
     "build:autoprefixer": "autoprefixer-cli css/style.css",
     "build-dev:sass": "node-sass --output-style expanded --source-map true -o css src/sass",
     "build:babel": "babel src/js/script.js --out-file js/script-compiled.js",
-    "build:code-quality": "npm run format && npm run lint",
+    "build:code-quality": "npm run format",
     "format": "prettier --write \"src/**/*.{js,html,scss}\"",
     "lint": "eslint js/",
     "watch": "npm-run-all build -p watch:*",
@@ -72,6 +72,7 @@
     "pretty-quick": "^1.8.0"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.4.3",
     "mkdirp": "^0.5.1",
     "rimraf": "^2.6.2"
   }
