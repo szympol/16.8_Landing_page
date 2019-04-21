@@ -3,3 +3,4 @@ src/images/
 **/sass/fontawesome/
 src/webfonts/
 src/scripts/bootstrap.min.*
+src/vendor/glide/glide.min.js
