@@ -83,3 +83,41 @@ let glide = new Glide('#hero', {
 });
 
 glide.mount();
+
+//video play when visible
+
+window.onload = () => {
+  let videos = document.getElementsByTagName('video');
+  let fraction = 0.8;
+
+  let checkScroll = () => {
+    for (let i = 0; i < videos.length; i++) {
+      let video = videos[i];
+      let x = video.offsetLeft;
+      let y = video.offsetTop;
+      let w = video.offsetWidth;
+      let h = video.offsetHeight;
+      let r = x + w; //right
+      let b = y + h; //bottom
+      let visibleX;
+      let visibleY;
+      let visible;
+
+      visibleX = Math.max(
+        0,
+        Math.min(w, window.pageXOffset + window.innerWidth - x, r - window.pageXOffset)
+      );
+      visibleY = Math.max(
+        0,
+        Math.min(h, window.pageYOffset + window.innerHeight - y, b - window.pageYOffset)
+      );
+
+      visible = (visibleX * visibleY) / (w * h);
+
+      visible > fraction ? video.play() : video.pause();
+    }
+  };
+
+  window.addEventListener('scroll', checkScroll, false);
+  window.addEventListener('resize', checkScroll, false);
+};

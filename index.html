@@ -23,7 +23,7 @@
       <div class="navbar-logo"></div>
       <ul id="navbar-sections" class="navbar-sections">
         <li class="navbar-sections--active"><a href="#">home</a></li>
-        <li><a href="#">about us</a></li>
+        <li><a href="about-us">about us</a></li>
         <li><a href="#">services</a></li>
         <li><a href="#">our projects</a></li>
         <li><a href="#">our team</a></li>
@@ -55,13 +55,39 @@
       </div>
     </div>
     <div class="hero-content">
-      <span class="hero-content-text">design is about<span class="hero-content-text--diffColor"> communication</span>
-      </span>
+      <h1 class="hero-content-text">design is about<span class="hero-content-text--diffColor"> communication</span>
+      </h1>about-us
       <p class="hero-content-phone">call us: +00 0 1234 5678</p>
-      <button class="hero-content-button">get in touch!</button>
+      <button class="btn">get in touch!</button>
     </div>
-  </main>
 
+    <section>
+      <div class="about-us container" id="about-us">
+        <h3 class="about-us-title">about us</h3>
+        <h4 class="about-us-subtitle">who we are?</h4>
+        <div class="about-us-content row">
+          <div class="col-xs-12 col-sm-12 col-md-7 about-us-content-text">
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+              blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language
+              ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is
+              a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful
+              Pointing has no control about the blind texts it is an almost unorthographic life One day however a small
+              line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+            <button class="btn">learn more</button>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-5 about-us-content-video">
+            <video controls autoplay loop muted width="100%" height="auto">
+              <source src="./src/video/ad.mp4" type="video/mp4">
+              <source src="./src/video/ad.webm" type="video/webm">
+              <p>Your browser doesn't support HTML5 video. Here is
+                a <a href="./src/video/ad.mp4" target="_blanket">link to the video</a> instead.</p>
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
   <script src="./src/vendor/glide/glide.min.js"></script>
   <script src="./js/script-compiled.js"></script>
 </body>

@@ -1,0 +1,49 @@
+.about-us {
+  &-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: $color1;
+    font-size: 1.875rem;
+  }
+  &-subtitle {
+    color: $color3;
+    font-size: 0.875rem;
+    margin-bottom: 50px;
+  }
+  &-title,
+  &-subtitle {
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &-content {
+    @include breakpoint(xs) {
+      flex-direction: column-reverse;
+    }
+    @include breakpoint(sm) {
+      flex-direction: column-reverse;
+    }
+    &-text {
+      font-size: 0.875rem;
+      padding-right: 30px;
+      @include breakpoint(xs) {
+        padding-right: 0;
+        .btn {
+          display: flex;
+          justify-content: center;
+          margin: 0 auto;
+        }
+      }
+      @include breakpoint(sm) {
+        padding-right: 0;
+        .btn {
+          display: flex;
+          justify-content: center;
+          margin: 0 auto;
+        }
+      }
+      p {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

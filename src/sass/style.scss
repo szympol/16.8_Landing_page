@@ -7,6 +7,7 @@
 /* Components */
 @import "./components/navbar";
 @import "./components/home";
+@import "./components/about-us";
 
 /* Sections */
 //@import "sections/registration_form";
@@ -47,4 +48,7 @@ main {
   left: 0;
   right: 0;
   z-index: -1;
+}
+section {
+  margin: 60px 0;
 }

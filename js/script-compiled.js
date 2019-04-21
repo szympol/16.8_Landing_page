@@ -97,3 +97,35 @@ var glide = new Glide('#hero', {
 });
 
 glide.mount();
+
+//video play when visible
+
+window.onload = function () {
+  var videos = document.getElementsByTagName('video');
+  var fraction = 0.8;
+
+  var checkScroll = function checkScroll() {
+    for (var i = 0; i < videos.length; i++) {
+      var video = videos[i];
+      var x = video.offsetLeft;
+      var y = video.offsetTop;
+      var w = video.offsetWidth;
+      var h = video.offsetHeight;
+      var r = x + w; //right
+      var b = y + h; //bottom
+      var visibleX = void 0;
+      var visibleY = void 0;
+      var visible = void 0;
+
+      visibleX = Math.max(0, Math.min(w, window.pageXOffset + window.innerWidth - x, r - window.pageXOffset));
+      visibleY = Math.max(0, Math.min(h, window.pageYOffset + window.innerHeight - y, b - window.pageYOffset));
+
+      visible = visibleX * visibleY / (w * h);
+
+      visible > fraction ? video.play() : video.pause();
+    }
+  };
+
+  window.addEventListener('scroll', checkScroll, false);
+  window.addEventListener('resize', checkScroll, false);
+};
