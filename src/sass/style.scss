@@ -5,7 +5,8 @@
 @import "layout";
 
 /* Components */
-@import "components/navbar";
+@import "./components/navbar";
+@import "./components/home";
 
 /* Sections */
 //@import "sections/registration_form";
@@ -38,4 +39,12 @@ body {
 .row {
   display: flex;
   flex-wrap: wrap;
+}
+
+main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
 }

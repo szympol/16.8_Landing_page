@@ -1,0 +1,62 @@
+.hero {
+  width: 100vw;
+  .hero-image-1,
+  .hero-image-2,
+  .hero-image-3 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+  .hero-image-1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../src/images/home1.jpg");
+  }
+  .hero-image-2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../src/images/home2.jpg");
+  }
+  .hero-image-3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../src/images/home3.jpg");
+  }
+}
+
+.glide__slides {
+  margin: 0;
+}
+
+.glide__bullet {
+  background-color: transparent;
+  width: 15px;
+  height: 15px;
+  border: 2px solid $color4;
+  margin: 0 0.3125em;
+}
+.glide__bullet:hover,
+.glide__bullet:focus {
+  border: 2px solid $color4;
+  background-color: $color4;
+}
+.glide__bullet--active {
+  background-color: $color4;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  text-transform: uppercase;
+  &-text {
+    font-size: 72px;
+  }
+  &-phone {
+    font-size: 24px;
+  }
+  &-button {
+    font-size: 12px;
+  }
+}

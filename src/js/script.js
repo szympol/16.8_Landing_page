@@ -1,5 +1,5 @@
 'use strict';
-import '@babel/polyfill';
+//import '@babel/polyfill';
 
 // variables
 const menu = document.querySelector('.hamburger');
@@ -13,13 +13,13 @@ let ifHasNavbarWrapperForMobileView;
 // toggle menu on mobile viewport
 menu.addEventListener(
   'click',
-  function () {
+  function() {
     this.classList.toggle('hamburger--active');
   },
   false
 );
 
-function toggleMenu () {
+function toggleMenu() {
   navbarWrapper.classList.toggle('navbar-wrapper--mobile');
   navbarSections.classList.toggle('navbar-sections--mobile');
   ifHasNavbarWrapperForMobileView = classesNavbarWrapper.contains(
@@ -27,13 +27,13 @@ function toggleMenu () {
   );
 }
 
-function removeMobileToggle () {
+function removeMobileToggle() {
   navbarWrapper.classList.remove('navbar-wrapper--mobile');
   navbarSections.classList.remove('navbar-sections--mobile');
   menu.classList.remove('hamburger--active');
 }
 
-menu.addEventListener('click', function (e) {
+menu.addEventListener('click', function(e) {
   e.preventDefault();
   toggleMenu();
 });
@@ -50,7 +50,7 @@ setViewportWidth();
 
 window.addEventListener(
   'resize',
-  function () {
+  function() {
     setViewportWidth();
     // eslint-disable-next-line no-unused-expressions
     viewportWidth > 768 && ifHasNavbarWrapperForMobileView
@@ -68,8 +68,18 @@ let sortNavbarSectionsElements = () => {
 };
 
 for (let i = 0; i < navbarSectionsElements.length; i++) {
-  navbarSectionsElements[i].addEventListener('click', function () {
+  navbarSectionsElements[i].addEventListener('click', function() {
     sortNavbarSectionsElements();
     navbarSectionsElements[i].classList.add('navbar-sections--active');
   });
 }
+
+let glide = new Glide('#hero', {
+  type: 'carousel',
+  hoverpause: false,
+  autoplay: false,
+  perView: 1,
+  gap: 0
+});
+
+glide.mount();
