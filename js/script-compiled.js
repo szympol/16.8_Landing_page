@@ -77,15 +77,15 @@ var sortNavbarSectionsElements = function sortNavbarSectionsElements() {
   }
 };
 
-var _loop = function _loop(i) {
-  navbarSectionsElements[i].addEventListener('click', function () {
+var _loop = function _loop(_i) {
+  navbarSectionsElements[_i].addEventListener('click', function () {
     sortNavbarSectionsElements();
-    navbarSectionsElements[i].classList.add('navbar-sections--active');
+    navbarSectionsElements[_i].classList.add('navbar-sections--active');
   });
 };
 
-for (var i = 0; i < navbarSectionsElements.length; i++) {
-  _loop(i);
+for (var _i = 0; _i < navbarSectionsElements.length; _i++) {
+  _loop(_i);
 }
 
 var glide = new Glide('#hero', {
@@ -105,8 +105,8 @@ window.onload = function () {
   var fraction = 0.8;
 
   var checkScroll = function checkScroll() {
-    for (var i = 0; i < videos.length; i++) {
-      var video = videos[i];
+    for (var _i2 = 0; _i2 < videos.length; _i2++) {
+      var video = videos[_i2];
       var x = video.offsetLeft;
       var y = video.offsetTop;
       var w = video.offsetWidth;
@@ -129,3 +129,39 @@ window.onload = function () {
   window.addEventListener('scroll', checkScroll, false);
   window.addEventListener('resize', checkScroll, false);
 };
+
+// init Isotope
+var iso = new Isotope('.our-projects-grid', {
+  itemSelector: '.our-projects-grid-item',
+  layoutMode: 'fitRows'
+});
+
+// bind filter button click
+var filtersElem = document.querySelector('.filters-button-group');
+filtersElem.addEventListener('click', function (event) {
+  // only work with buttons
+  if (!matchesSelector(event.target, 'button')) {
+    return;
+  }
+  var filterValue = event.target.getAttribute('data-filter');
+  // use matching filter function
+  iso.arrange({ filter: filterValue });
+});
+
+// change is-checked class on buttons
+var buttonGroups = document.querySelectorAll('.button-group');
+for (var i = 0, len = buttonGroups.length; i < len; i++) {
+  var buttonGroup = buttonGroups[i];
+  radioButtonGroup(buttonGroup);
+}
+
+function radioButtonGroup(buttonGroup) {
+  buttonGroup.addEventListener('click', function (event) {
+    // only work with buttons
+    if (!matchesSelector(event.target, 'button')) {
+      return;
+    }
+    buttonGroup.querySelector('.is-checked').classList.remove('is-checked');
+    event.target.classList.add('is-checked');
+  });
+}
