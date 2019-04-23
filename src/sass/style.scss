@@ -5,12 +5,13 @@
 @import "layout";
 
 /* Components */
-@import "./components/navbar";
-@import "./components/home";
-@import "./components/about-us";
+@import "./components/general";
 
 /* Sections */
-//@import "sections/registration_form";
+@import "./sections/navbar";
+@import "./sections/home";
+@import "./sections/about-us";
+@import "./sections/services";
 
 * {
   box-sizing: border-box;
@@ -49,6 +50,10 @@ main {
   right: 0;
   z-index: -1;
 }
+
 section {
-  margin: 60px 0;
+  padding: 60px 0;
+}
+.section--blackBackground {
+  background: $background1;
 }

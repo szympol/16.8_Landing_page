@@ -1,0 +1,22 @@
+.services {
+  text-align: center;
+  .services-content {
+    i {
+      font-size: 3.625rem;
+      color: $color4;
+    }
+    .services-content-title {
+      font-size: 1.125rem;
+      color: $color2;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .services-content-text {
+      font-size: 0.75rem;
+      color: $color5;
+    }
+    > div {
+      padding: 7.5px;
+    }
+  }
+}
