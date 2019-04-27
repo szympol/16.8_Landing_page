@@ -467,6 +467,14 @@ template { display: none; }
 
 .our-projects-grid-item > * { margin: 0; padding: 0; }
 
+.our-team--sectionBackground { height: 75vh; width: 100%; background-image: url("../src/images/Img_team_BG.png"); background-position: center; background-repeat: no-repeat; background-size: cover; }
+
+@media (min-width: 577px) and (max-width: 767px) { .glide__bullet--turnOff { display: none; } }
+
+@media (min-width: 768px) and (max-width: 991px) { .glide__bullet--turnOff { display: none; } }
+
+@media (min-width: 992px) { .glide__bullet--turnOff { display: none; } }
+
 * { box-sizing: border-box; font-family: "Montserrat", sans-serif; line-height: 1.42857143; }
 
 body { margin: 0 auto; max-width: 100%; }

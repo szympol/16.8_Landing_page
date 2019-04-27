@@ -1,0 +1,26 @@
+.our-team {
+  //min-height: calc(75vh - 60px);
+  &--sectionBackground {
+    height: 75vh;
+    width: 100%;
+    background-image: url("../src/images/Img_team_BG.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.glide__slide--teamBox {
+}
+
+.glide__bullet--turnOff {
+  @include breakpoint(sm) {
+    display: none;
+  }
+  @include breakpoint(md) {
+    display: none;
+  }
+  @include breakpoint(lg) {
+    display: none;
+  }
+}

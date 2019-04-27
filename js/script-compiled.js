@@ -98,6 +98,20 @@ var glide = new Glide('#hero', {
 
 glide.mount();
 
+var glideTeam = new Glide('#our-team', {
+  type: 'carousel',
+  hoverpause: false,
+  autoplay: false,
+  perView: 3,
+  gap: 0,
+  breakpoints: {
+    600: { perView: 1 },
+    1200: { perView: 3 }
+  }
+});
+
+glideTeam.mount();
+
 //video play when visible
 
 window.onload = function () {
