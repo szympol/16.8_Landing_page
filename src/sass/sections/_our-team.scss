@@ -11,12 +11,20 @@
 }
 
 .glide__slide--teamBox {
+  height: auto;
+  background: $background3;
+  padding: 30px;
 }
-
-.glide__bullet--turnOff {
-  @include breakpoint(sm) {
-    display: none;
+.glide__bullet--widerThanMobile {
+  display: none;
+  @include breakpoint(md) {
+    display: block;
   }
+  @include breakpoint(lg) {
+    display: block;
+  }
+}
+.glide__bullet--mobile {
   @include breakpoint(md) {
     display: none;
   }

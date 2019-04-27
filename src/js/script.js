@@ -89,10 +89,10 @@ let glideTeam = new Glide('#our-team', {
   hoverpause: false,
   autoplay: false,
   perView: 3,
-  gap: 0,
+  gap: 30,
+  startAt: 0,
   breakpoints: {
-    600: { perView: 1 },
-    1200: { perView: 3 }
+    767: { perView: 1 }
   }
 });
 

@@ -469,17 +469,25 @@ template { display: none; }
 
 .our-team--sectionBackground { height: 75vh; width: 100%; background-image: url("../src/images/Img_team_BG.png"); background-position: center; background-repeat: no-repeat; background-size: cover; }
 
-@media (min-width: 577px) and (max-width: 767px) { .glide__bullet--turnOff { display: none; } }
+.glide__slide--teamBox { height: auto; background: #fff; padding: 30px; width: 350px; }
 
-@media (min-width: 768px) and (max-width: 991px) { .glide__bullet--turnOff { display: none; } }
+.glide__bullet--widerThanMobile { display: none; }
 
-@media (min-width: 992px) { .glide__bullet--turnOff { display: none; } }
+@media (min-width: 768px) and (max-width: 991px) { .glide__bullet--widerThanMobile { display: block; } }
+
+@media (min-width: 992px) { .glide__bullet--widerThanMobile { display: block; } }
+
+@media (min-width: 768px) and (max-width: 991px) { .glide__bullet--mobile { display: none; } }
+
+@media (min-width: 992px) { .glide__bullet--mobile { display: none; } }
 
 * { box-sizing: border-box; font-family: "Montserrat", sans-serif; line-height: 1.42857143; }
 
 body { margin: 0 auto; max-width: 100%; }
 
 .container { width: 100%; max-width: 1170px; margin: 0 auto; padding-left: 30px; padding-right: 30px; }
+
+.container--noPadding { padding: 0; }
 
 .container-fluid { width: 100%; padding-left: 30px; padding-right: 30px; }
 
