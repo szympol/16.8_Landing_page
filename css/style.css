@@ -315,6 +315,10 @@ template { display: none; }
 
 .title, .subtitle { text-transform: uppercase; text-align: center; }
 
+.glide__track--marginBottom { margin-bottom: 60px; }
+
+.glide__bullets--marginBottom { bottom: -4rem; }
+
 /* Sections */
 .navbar { background-color: #000; width: 100%; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; text-transform: uppercase; font-weight: bold; }
 
@@ -467,19 +471,19 @@ template { display: none; }
 
 .our-projects-grid-item > * { margin: 0; padding: 0; }
 
-.our-team--sectionBackground { height: 75vh; width: 100%; background-image: url("../src/images/Img_team_BG.png"); background-position: center; background-repeat: no-repeat; background-size: cover; }
+.our-team--sectionBackground { height: auto; width: 100%; background-image: url("../src/images/Img_team_BG.png"); background-position: center; background-repeat: no-repeat; background-size: cover; }
 
-.glide__slide--teamBox { height: auto; background: #fff; padding: 30px; width: 350px; }
+.our-team-box { background: #fff; padding: 30px; text-align: center; }
 
-.glide__bullet--widerThanMobile { display: none; }
+.our-team-box-name { font-size: 1.3125rem; margin-bottom: 0; text-transform: uppercase; }
 
-@media (min-width: 768px) and (max-width: 991px) { .glide__bullet--widerThanMobile { display: block; } }
+.our-team-box-title { font-size: 0.875rem; margin-top: 0.4rem; }
 
-@media (min-width: 992px) { .glide__bullet--widerThanMobile { display: block; } }
+.our-team-box-icons { margin-top: 2.5rem; margin-left: -15px; margin-right: -15px; }
 
-@media (min-width: 768px) and (max-width: 991px) { .glide__bullet--mobile { display: none; } }
+.our-team-box-icons i[class^="fa"] { font-size: 1.25rem; width: 2.5rem; text-align: center; line-height: 1.875rem; padding: 0.3125rem; border-radius: 50%; background: #bebebe; color: #fff; cursor: pointer; transition: all 0.3s ease-in-out; }
 
-@media (min-width: 992px) { .glide__bullet--mobile { display: none; } }
+.our-team-box-icons i[class^="fa"]:hover { background: #b88b58; }
 
 * { box-sizing: border-box; font-family: "Montserrat", sans-serif; line-height: 1.42857143; }
 

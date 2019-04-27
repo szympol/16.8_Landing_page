@@ -1,5 +1,5 @@
 'use strict';
-//import '@babel/polyfill';
+// import '@babel/polyfill';
 
 // variables
 const menu = document.querySelector('.hamburger');
@@ -74,6 +74,8 @@ for (let i = 0; i < navbarSectionsElements.length; i++) {
   });
 }
 
+// sliders
+
 let glide = new Glide('#hero', {
   type: 'carousel',
   hoverpause: false,
@@ -86,19 +88,26 @@ glide.mount();
 
 let glideTeam = new Glide('#our-team', {
   type: 'carousel',
-  hoverpause: false,
+  hoverpause: true,
   autoplay: false,
   perView: 3,
   gap: 30,
   startAt: 0,
   breakpoints: {
-    767: { perView: 1 }
+    576: {
+      perView: 1,
+      autoplay: false
+    },
+    767: {
+      perView: 2,
+      autoplay: false
+    }
   }
 });
 
 glideTeam.mount();
 
-//video play when visible
+// video play when visible
 
 window.onload = () => {
   let videos = document.getElementsByTagName('video');
