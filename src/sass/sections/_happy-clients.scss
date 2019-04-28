@@ -1,0 +1,22 @@
+.happy-clients {
+  &-box {
+    padding: 30px;
+    text-align: center;
+    &-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: -0.75rem;
+    }
+    &-title {
+      font-size: 1.125rem;
+    }
+    &-text {
+      font-size: 0.875rem;
+      color: $colo8;
+    }
+    .fas {
+      color: $colo8;
+      font-size: 1.5rem;
+    }
+  }
+}

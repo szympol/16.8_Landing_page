@@ -76,7 +76,7 @@ for (let i = 0; i < navbarSectionsElements.length; i++) {
 
 // sliders
 
-let glide = new Glide('#hero', {
+let glide = new Glide('.hero', {
   type: 'carousel',
   hoverpause: false,
   autoplay: false,
@@ -86,7 +86,7 @@ let glide = new Glide('#hero', {
 
 glide.mount();
 
-let glideTeam = new Glide('#our-team', {
+let glideTeam = new Glide('.our-team', {
   type: 'carousel',
   hoverpause: true,
   autoplay: false,
@@ -98,7 +98,7 @@ let glideTeam = new Glide('#our-team', {
       perView: 1,
       autoplay: false
     },
-    767: {
+    991: {
       perView: 2,
       autoplay: false
     }
@@ -106,6 +106,16 @@ let glideTeam = new Glide('#our-team', {
 });
 
 glideTeam.mount();
+
+let glideHappyClients = new Glide('.happy-clients', {
+  type: 'carousel',
+  hoverpause: true,
+  autoplay: false,
+  perView: 1,
+  startAt: 0
+});
+
+glideHappyClients.mount();
 
 // video play when visible
 

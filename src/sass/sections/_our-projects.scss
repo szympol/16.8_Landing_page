@@ -100,3 +100,51 @@
     padding: 0;
   }
 }
+
+.overlay-container {
+  position: relative;
+  width: 254px;
+  height: 165px;
+  display: inline-block;
+  > img {
+    width: 254px;
+    height: 165px;
+    display: block;
+  }
+  .overlay {
+    position: absolute;
+    transition: all 0.3s ease;
+    opacity: 0;
+    .overlay-text {
+      color: $background3;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      &-title {
+        font-size: 1.125rem;
+        text-transform: uppercase;
+      }
+      &-info {
+        font-size: 0.75rem;
+        color: $color7;
+      }
+    }
+  }
+  .overlay-fade {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: $background-overlay;
+  }
+  &:hover {
+    .overlay-fade {
+      width: 100%;
+    }
+    .overlay {
+      opacity: 1;
+    }
+  }
+}

@@ -90,7 +90,7 @@ for (var _i = 0; _i < navbarSectionsElements.length; _i++) {
 
 // sliders
 
-var glide = new Glide('#hero', {
+var glide = new Glide('.hero', {
   type: 'carousel',
   hoverpause: false,
   autoplay: false,
@@ -100,7 +100,7 @@ var glide = new Glide('#hero', {
 
 glide.mount();
 
-var glideTeam = new Glide('#our-team', {
+var glideTeam = new Glide('.our-team', {
   type: 'carousel',
   hoverpause: true,
   autoplay: false,
@@ -112,7 +112,7 @@ var glideTeam = new Glide('#our-team', {
       perView: 1,
       autoplay: false
     },
-    767: {
+    991: {
       perView: 2,
       autoplay: false
     }
@@ -120,6 +120,16 @@ var glideTeam = new Glide('#our-team', {
 });
 
 glideTeam.mount();
+
+var glideHappyClients = new Glide('.happy-clients', {
+  type: 'carousel',
+  hoverpause: true,
+  autoplay: false,
+  perView: 1,
+  startAt: 0
+});
+
+glideHappyClients.mount();
 
 // video play when visible
 

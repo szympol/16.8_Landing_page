@@ -13,6 +13,7 @@
 @import "./sections/services";
 @import "./sections/our-projects";
 @import "./sections/our-team";
+@import "./sections/happy-clients";
 
 * {
   box-sizing: border-box;
@@ -57,6 +58,7 @@ main {
 
 section {
   padding: 60px 0;
+  background-color: $background2;
 }
 .section--blackBackground {
   background: $background1;
