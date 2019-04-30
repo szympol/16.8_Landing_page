@@ -305,6 +305,12 @@ template { display: none; }
 
 .btn--marginTop { margin: 30px; }
 
+.btn--priceSection { background-color: #373737; }
+
+.btn--priceSection:hover { border: 1px solid #b88b58; background-color: #b88b58; }
+
+.btn--priceSection:focus, .btn--priceSection:active { border: 1px solid #b88b58; background-color: #b88b58; }
+
 .title { margin-top: 0; margin-bottom: 20px; font-size: 1.875rem; }
 
 .title--whiteBackground { color: #000; }
@@ -509,13 +515,41 @@ template { display: none; }
 
 .happy-clients-box { padding: 30px; text-align: center; }
 
-.happy-clients-box-name { font-size: 1.5rem; font-weight: 700; margin-bottom: -.75rem; }
+.happy-clients-box-name { font-size: 1.5rem; font-weight: 700; margin-bottom: -0.75rem; }
 
 .happy-clients-box-title { font-size: 1.125rem; }
 
 .happy-clients-box-text { font-size: 0.875rem; color: #7e7e7e; }
 
 .happy-clients-box .fas { color: #7e7e7e; font-size: 1.5rem; }
+
+.happy-clients-wrapper { margin: -15px; text-align: center; -ms-flex-align: center; align-items: center; }
+
+.happy-clients-logo { padding: 15px; cursor: pointer; }
+
+.price--wrapper { margin: 0 0 0 -30px; }
+
+.price--box { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; margin: 0 0 30px 30px; padding: 30px 60px; text-align: center; font-size: 0.625rem; background: #fff; -ms-flex-align: center; align-items: center; }
+
+@media (max-width: 576px) { .price--box { max-width: calc(100% - 30px); } }
+
+@media (min-width: 577px) and (max-width: 767px) { .price--box { max-width: calc(50% - 30px); } }
+
+@media (min-width: 768px) and (max-width: 991px) { .price--box { max-width: calc(50% - 30px); } }
+
+@media (min-width: 992px) { .price--box { max-width: calc(25% - 30px); } }
+
+.price-package { font-size: 0.875rem; text-transform: uppercase; margin-bottom: 1rem; color: #373737; }
+
+.price-amount { color: #373737; font-size: 1.875rem; font-weight: 700; }
+
+.price-month { margin-bottom: 1.5rem; text-transform: uppercase; color: #aeaeae; margin-top: -0.3125rem; }
+
+.price-text { color: #7e7e7e; }
+
+.price-text:last-of-type { margin-bottom: 1.75rem; }
+
+.price-horizontalLines { width: 10px; height: 1px; border-top: 1px solid #7e7e7e; margin-top: 7px; margin-bottom: 6px; }
 
 * { box-sizing: border-box; font-family: "Montserrat", sans-serif; line-height: 1.42857143; }
 
@@ -534,3 +568,5 @@ main { position: absolute; top: 0; left: 0; right: 0; z-index: -1; }
 section { padding: 60px 0; background-color: #f7f7f7; }
 
 .section--blackBackground { background: #000; }
+
+.section--whiteBackground { background: #fff; }

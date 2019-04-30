@@ -14,6 +14,7 @@
 @import "./sections/our-projects";
 @import "./sections/our-team";
 @import "./sections/happy-clients";
+@import "./sections/price";
 
 * {
   box-sizing: border-box;
@@ -62,4 +63,7 @@ section {
 }
 .section--blackBackground {
   background: $background1;
+}
+.section--whiteBackground {
+  background: $background3;
 }

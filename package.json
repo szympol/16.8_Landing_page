@@ -10,7 +10,7 @@
     "init:dirs": "mkdirp src src/sass css src/vendor src/images js src/sass/components src/sass/pages src/sass/sections",
     "init:files": "touch README.md index.html styleguide.html src/sass/style.scss  src/sass/_layout.scss src/sass/_mixins.scss src/sass/_normalize.scss src/sass/_variables.scss js/script.js css/style.css",
     "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
-    "build": "npm-run-all build:* test",
+    "build": "npm-run-all build:*",
     "build:clean": "rimraf css/*.css",
     "build:sass": "node-sass --output-style compact -o css src/sass",
     "build:autoprefixer": "autoprefixer-cli css/style.css",

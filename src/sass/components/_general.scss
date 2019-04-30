@@ -36,6 +36,18 @@
     margin: 30px;
   }
 }
+.btn--priceSection {
+  background-color: $color9;
+  &:hover {
+    border: 1px solid $color4;
+    background-color: $color4;
+  }
+  &:focus,
+  &:active {
+    border: 1px solid $color4;
+    background-color: $color4;
+  }
+}
 
 .title {
   margin-top: 0;
