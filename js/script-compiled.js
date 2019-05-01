@@ -7,6 +7,7 @@ var menu = document.querySelector('.hamburger');
 var navbarWrapper = document.getElementById('navbar-wrapper');
 var navbarSections = document.getElementById('navbar-sections');
 var navbarSectionsElements = navbarSections.querySelectorAll('li');
+var navbarSectionsElementsLinks = navbarSections.querySelectorAll('li a');
 
 var classesNavbarWrapper = navbarWrapper.classList;
 var ifHasNavbarWrapperForMobileView = void 0;
@@ -197,4 +198,33 @@ function radioButtonGroup(buttonGroup) {
     buttonGroup.querySelector('.is-checked').classList.remove('is-checked');
     event.target.classList.add('is-checked');
   });
+}
+
+// delegate onClick transfer to sections from 'a' to 'li' tags in the navbar
+
+var simulateClick = function simulateClick(elem) {
+  // Create our event (with options)
+  var evt = new MouseEvent('click', {
+    bubbles: true,
+    cancelable: true,
+    view: window
+  });
+  // If cancelled, don't dispatch our event
+  var canceled = !elem.dispatchEvent(evt);
+};
+
+var _loop2 = function _loop2(_i3) {
+  navbarSectionsElements[_i3].addEventListener('click', function (e) {
+    if (e.target && e.target.nodeName == 'LI') {
+      // List item found!  Output the ID!
+      var a = navbarSectionsElements[_i3].querySelector('a');
+      //let a = e.target.getElementsByTagName('a');
+      simulateClick(a);
+      // console.log('List item ', i, ' was clicked!', a.innerText);
+    }
+  });
+};
+
+for (var _i3 = 0; _i3 < navbarSectionsElements.length; _i3++) {
+  _loop2(_i3);
 }
