@@ -132,6 +132,16 @@ var glideHappyClients = new Glide('.happy-clients', {
 
 glideHappyClients.mount();
 
+var glidePremium = new Glide('.premium', {
+  type: 'carousel',
+  hoverpause: true,
+  autoplay: false,
+  perView: 1,
+  startAt: 0
+});
+
+glidePremium.mount();
+
 // video play when visible
 
 window.onload = function () {
@@ -215,8 +225,7 @@ var simulateClick = function simulateClick(elem) {
 
 var _loop2 = function _loop2(_i3) {
   navbarSectionsElements[_i3].addEventListener('click', function (e) {
-    if (e.target && e.target.nodeName == 'LI') {
-      // List item found!  Output the ID!
+    if (e.target && e.target.nodeName === 'LI') {
       var a = navbarSectionsElements[_i3].querySelector('a');
       //let a = e.target.getElementsByTagName('a');
       simulateClick(a);

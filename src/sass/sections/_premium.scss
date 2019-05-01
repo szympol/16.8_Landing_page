@@ -1,0 +1,70 @@
+.premium {
+  border-bottom: 1px solid $color7;
+}
+.premium-box {
+  &-books {
+    margin: 0 auto;
+  }
+  &-checks {
+    text-align: center;
+  }
+  &-text {
+    &-header {
+      font-size: 1.3125rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      @include breakpoint(xs) {
+        font-size: 1.2rem;
+      }
+      @include breakpoint(sm) {
+        font-size: 1.2rem;
+      }
+    }
+    &-info {
+      color: $color7;
+      line-height: 1.7;
+      font-size: 0.875rem;
+      @include breakpoint(xs) {
+        font-size: 0.75rem;
+      }
+      @include breakpoint(sm) {
+        font-size: 0.75rem;
+      }
+    }
+    &-list {
+      margin-top: 0.2rem;
+      padding: 0 1em;
+      list-style: none;
+      text-transform: uppercase;
+      font-size: 0.875rem;
+      color: $color7;
+      @include breakpoint(xs) {
+        font-size: 0.75rem;
+      }
+      @include breakpoint(sm) {
+        font-size: 0.75rem;
+      }
+      li {
+        line-height: 1.7;
+      }
+      li:before {
+        content: "";
+        border-top: 1px solid $color7;
+        display: block;
+        height: 0px;
+        width: 12px;
+        left: -1em;
+        top: 0.8em;
+        position: relative;
+      }
+    }
+  }
+}
+
+.premium-box-text--marginTop {
+  margin-top: 2.5rem;
+  .row:nth-child(1),
+  .row:nth-child(2) {
+    margin-bottom: 1rem;
+  }
+}

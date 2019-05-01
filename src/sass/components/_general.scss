@@ -49,6 +49,12 @@
   }
 }
 
+.btn--premium {
+  display: block;
+  margin: 0 auto;
+  margin-top: 4.6875rem;
+}
+
 .title {
   margin-top: 0;
   margin-bottom: 20px;
@@ -74,8 +80,14 @@
 .glide__track--marginBottom {
   margin-bottom: 60px;
 }
+.glide__track--marginBottomPremium {
+  margin-bottom: 1.875rem;
+}
 .glide__bullets--marginBottom {
   bottom: -4rem;
+}
+.glide__bullets--marginBottomPremium {
+  bottom: -3rem;
 }
 .glide__bullets--marginBottomCustomer {
   bottom: 0rem;
