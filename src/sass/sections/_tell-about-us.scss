@@ -1,0 +1,77 @@
+.tellAboutUs {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  color: $background6;
+  margin-bottom: 0.3125rem;
+  @include breakpoint(lg) {
+    width: 75%;
+    margin-bottom: 0;
+  }
+  > span:first-child {
+    width: 100%;
+    margin-bottom: 0.3125rem;
+    text-align: center;
+    @include breakpoint(lg) {
+      width: auto;
+      margin-bottom: 0;
+      text-align: inherit;
+    }
+  }
+  .fa-share-alt {
+    margin-right: 1.5rem;
+    color: $background6;
+  }
+  .tellAboutUs--text {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  i[class^="fa"] {
+    font-size: 1.25rem;
+    width: 2.5rem;
+    text-align: center;
+    line-height: 1.875rem;
+    padding: 0.3125rem;
+    border-radius: 50%;
+  }
+  .fa-twitter,
+  .fa-linkedin-in,
+  .fa-facebook-f,
+  .fa-google-plus-g,
+  .fa-pinterest-p {
+    color: $background3;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background: $color4;
+    }
+    &:active,
+    &:focus {
+      background: $background1;
+    }
+  }
+  .fa-twitter {
+    background: #1dcaff;
+  }
+  .fa-linkedin-in {
+    background: #0077b5;
+  }
+  .fa-facebook-f {
+    background: #3b5998;
+  }
+  .fa-google-plus-g {
+    background: #dd4b39;
+  }
+  .fa-pinterest-p {
+    background: #bd081c;
+  }
+}
+
+.tellAboutUs--number {
+  font-size: 0.8125rem;
+  margin-left: 0.3125rem;
+  margin-right: 0.3125rem;
+  font-weight: 700;
+}

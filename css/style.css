@@ -601,6 +601,38 @@ template { display: none; }
 
 .some-facts .some-facts-content > div { padding: 7.5px; }
 
+.tellAboutUs { margin: 0 auto; display: -ms-flexbox; display: flex; -ms-flex-flow: row wrap; flex-flow: row wrap; -ms-flex-pack: space-evenly; justify-content: space-evenly; color: #bebebe; margin-bottom: 0.3125rem; }
+
+@media (min-width: 992px) { .tellAboutUs { width: 75%; margin-bottom: 0; } }
+
+.tellAboutUs > span:first-child { width: 100%; margin-bottom: 0.3125rem; text-align: center; }
+
+@media (min-width: 992px) { .tellAboutUs > span:first-child { width: auto; margin-bottom: 0; text-align: inherit; } }
+
+.tellAboutUs .fa-share-alt { margin-right: 1.5rem; color: #bebebe; }
+
+.tellAboutUs .tellAboutUs--text { font-size: 0.875rem; text-transform: uppercase; font-weight: 700; }
+
+.tellAboutUs i[class^="fa"] { font-size: 1.25rem; width: 2.5rem; text-align: center; line-height: 1.875rem; padding: 0.3125rem; border-radius: 50%; }
+
+.tellAboutUs .fa-twitter, .tellAboutUs .fa-linkedin-in, .tellAboutUs .fa-facebook-f, .tellAboutUs .fa-google-plus-g, .tellAboutUs .fa-pinterest-p { color: #fff; cursor: pointer; transition: all 0.3s ease-in-out; }
+
+.tellAboutUs .fa-twitter:hover, .tellAboutUs .fa-linkedin-in:hover, .tellAboutUs .fa-facebook-f:hover, .tellAboutUs .fa-google-plus-g:hover, .tellAboutUs .fa-pinterest-p:hover { background: #b88b58; }
+
+.tellAboutUs .fa-twitter:active, .tellAboutUs .fa-twitter:focus, .tellAboutUs .fa-linkedin-in:active, .tellAboutUs .fa-linkedin-in:focus, .tellAboutUs .fa-facebook-f:active, .tellAboutUs .fa-facebook-f:focus, .tellAboutUs .fa-google-plus-g:active, .tellAboutUs .fa-google-plus-g:focus, .tellAboutUs .fa-pinterest-p:active, .tellAboutUs .fa-pinterest-p:focus { background: #000; }
+
+.tellAboutUs .fa-twitter { background: #1dcaff; }
+
+.tellAboutUs .fa-linkedin-in { background: #0077b5; }
+
+.tellAboutUs .fa-facebook-f { background: #3b5998; }
+
+.tellAboutUs .fa-google-plus-g { background: #dd4b39; }
+
+.tellAboutUs .fa-pinterest-p { background: #bd081c; }
+
+.tellAboutUs--number { font-size: 0.8125rem; margin-left: 0.3125rem; margin-right: 0.3125rem; font-weight: 700; }
+
 * { box-sizing: border-box; font-family: "Montserrat", sans-serif; line-height: 1.42857143; }
 
 body { margin: 0 auto; max-width: 100%; }
@@ -621,4 +653,4 @@ section { padding: 60px 0; background-color: #f7f7f7; }
 
 .section--whiteBackground { background: #fff; }
 
-.fake-div { width: 100%; height: 1280px; position: relative; }
+.section--smallerPadding { padding: 30px 0; }
