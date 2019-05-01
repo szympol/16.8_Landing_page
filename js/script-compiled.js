@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 'use strict';
 // import '@babel/polyfill';
 
@@ -226,9 +227,9 @@ var simulateClick = function simulateClick(elem) {
 var _loop2 = function _loop2(_i3) {
   navbarSectionsElements[_i3].addEventListener('click', function (e) {
     if (e.target && e.target.nodeName === 'LI') {
-      var a = navbarSectionsElements[_i3].querySelector('a');
+      var _a = navbarSectionsElements[_i3].querySelector('a');
       //let a = e.target.getElementsByTagName('a');
-      simulateClick(a);
+      simulateClick(_a);
       // console.log('List item ', i, ' was clicked!', a.innerText);
     }
   });
@@ -237,3 +238,32 @@ var _loop2 = function _loop2(_i3) {
 for (var _i3 = 0; _i3 < navbarSectionsElements.length; _i3++) {
   _loop2(_i3);
 }
+
+// countUp
+
+var a = 0;
+$(window).scroll(function () {
+  var oTop = $('#counter').offset().top - window.innerHeight;
+  if (a === 0 && $(window).scrollTop() > oTop) {
+    $('.counter-value').each(function () {
+      var $this = $(this);
+      var countTo = $this.attr('data-count');
+      $({
+        countNum: $this.text()
+      }).animate({
+        countNum: countTo
+      }, {
+        duration: 2000,
+        easing: 'swing',
+        step: function step() {
+          $this.text(Math.floor(this.countNum));
+        },
+        complete: function complete() {
+          $this.text(this.countNum);
+          // alert('finished');
+        }
+      });
+    });
+    a = 1;
+  }
+});

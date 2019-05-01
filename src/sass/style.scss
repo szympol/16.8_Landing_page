@@ -16,6 +16,7 @@
 @import "./sections/happy-clients";
 @import "./sections/price";
 @import "./sections/premium";
+@import "./sections/some-facts";
 
 * {
   box-sizing: border-box;
@@ -67,4 +68,10 @@ section {
 }
 .section--whiteBackground {
   background: $background3;
+}
+
+.fake-div {
+  width: 100%;
+  height: 1280px;
+  position: relative;
 }

@@ -1,0 +1,35 @@
+.some-facts {
+  text-align: center;
+  .some-facts-content {
+    .some-facts-content-number {
+      font-size: 3.625rem;
+      color: $color4;
+      font-weight: 700;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 1.875rem;
+        height: 0.1875rem;
+        background: $color8;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, -50%);
+        margin-bottom: -0.1875rem;
+      }
+    }
+    .some-facts-content-title {
+      font-size: 1.125rem;
+      color: $color2;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .some-facts-content-text {
+      font-size: 0.75rem;
+      color: $color8;
+    }
+    > div {
+      padding: 7.5px;
+    }
+  }
+}

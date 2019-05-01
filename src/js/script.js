@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 'use strict';
 // import '@babel/polyfill';
 
@@ -225,3 +226,36 @@ for (let i = 0; i < navbarSectionsElements.length; i++) {
     }
   });
 }
+
+// countUp
+
+var a = 0;
+$(window).scroll(function() {
+  var oTop = $('#counter').offset().top - window.innerHeight;
+  if (a === 0 && $(window).scrollTop() > oTop) {
+    $('.counter-value').each(function() {
+      var $this = $(this);
+      var countTo = $this.attr('data-count');
+      $({
+        countNum: $this.text()
+      }).animate(
+        {
+          countNum: countTo
+        },
+
+        {
+          duration: 2000,
+          easing: 'swing',
+          step: function() {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function() {
+            $this.text(this.countNum);
+            // alert('finished');
+          }
+        }
+      );
+    });
+    a = 1;
+  }
+});
