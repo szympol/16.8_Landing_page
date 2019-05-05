@@ -1,0 +1,55 @@
+.contact-us {
+  max-width: 600px;
+  padding: 0 30px;
+  margin: 0 auto;
+  form {
+    justify-content: space-between;
+    .contact-us-name,
+    .contact-us-email,
+    .contact-us-subject,
+    .contact-us-message {
+      margin-bottom: 30px;
+      padding: 15px 0px;
+      font-size: 0.8125rem;
+      outline: none;
+      border: none;
+      border-bottom: 2px solid $color3;
+      color: $color3;
+      background: transparent;
+      transition: all 0.2s ease-in-out;
+      &:hover,
+      &:active,
+      &:focus {
+        border-bottom: 2px solid $color1;
+      }
+      @include breakpoint(xs) {
+        border-bottom: 1.5px solid $color3;
+        &:hover,
+        &:active,
+        &:focus {
+          border-bottom: 1.5px solid $color1;
+        }
+      }
+    }
+    .contact-us-name,
+    .contact-us-email {
+      width: 47%;
+      @include breakpoint(xs) {
+        width: 100%;
+      }
+    }
+    .contact-us-subject,
+    .contact-us-message {
+      width: 100%;
+    }
+    .contact-us-message {
+      height: 100px;
+      overflow: hidden;
+      line-height: calc(100 * 9.5%);
+      margin-bottom: 50px;
+      &:focus {
+        line-height: 0.8125rem;
+      }
+    }
+  }
+}

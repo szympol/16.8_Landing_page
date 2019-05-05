@@ -311,6 +311,8 @@ template { display: none; }
 
 .btn--priceSection:focus, .btn--priceSection:active { border: 1px solid #b88b58; background-color: #b88b58; }
 
+.btn--center { display: block; margin: 0 auto; }
+
 .btn--premium { display: block; margin: 0 auto; margin-top: 4.6875rem; }
 
 .title { margin-top: 0; margin-bottom: 20px; font-size: 1.875rem; }
@@ -632,6 +634,27 @@ template { display: none; }
 .tellAboutUs .fa-pinterest-p { background: #bd081c; }
 
 .tellAboutUs--number { font-size: 0.8125rem; margin-left: 0.3125rem; margin-right: 0.3125rem; font-weight: 700; }
+
+.contact-us { max-width: 600px; padding: 0 30px; margin: 0 auto; }
+
+.contact-us form { -ms-flex-pack: justify; justify-content: space-between; }
+
+.contact-us form .contact-us-name, .contact-us form .contact-us-email, .contact-us form .contact-us-subject, .contact-us form .contact-us-message { margin-bottom: 30px; padding: 15px 0px; font-size: 0.8125rem; outline: none; border: none; border-bottom: 2px solid #aeaeae; color: #aeaeae; background: transparent; transition: all 0.2s ease-in-out; }
+
+.contact-us form .contact-us-name:hover, .contact-us form .contact-us-name:active, .contact-us form .contact-us-name:focus, .contact-us form .contact-us-email:hover, .contact-us form .contact-us-email:active, .contact-us form .contact-us-email:focus, .contact-us form .contact-us-subject:hover, .contact-us form .contact-us-subject:active, .contact-us form .contact-us-subject:focus, .contact-us form .contact-us-message:hover, .contact-us form .contact-us-message:active, .contact-us form .contact-us-message:focus { border-bottom: 2px solid #000; }
+
+@media (max-width: 576px) { .contact-us form .contact-us-name, .contact-us form .contact-us-email, .contact-us form .contact-us-subject, .contact-us form .contact-us-message { border-bottom: 1.5px solid #aeaeae; }
+  .contact-us form .contact-us-name:hover, .contact-us form .contact-us-name:active, .contact-us form .contact-us-name:focus, .contact-us form .contact-us-email:hover, .contact-us form .contact-us-email:active, .contact-us form .contact-us-email:focus, .contact-us form .contact-us-subject:hover, .contact-us form .contact-us-subject:active, .contact-us form .contact-us-subject:focus, .contact-us form .contact-us-message:hover, .contact-us form .contact-us-message:active, .contact-us form .contact-us-message:focus { border-bottom: 1.5px solid #000; } }
+
+.contact-us form .contact-us-name, .contact-us form .contact-us-email { width: 47%; }
+
+@media (max-width: 576px) { .contact-us form .contact-us-name, .contact-us form .contact-us-email { width: 100%; } }
+
+.contact-us form .contact-us-subject, .contact-us form .contact-us-message { width: 100%; }
+
+.contact-us form .contact-us-message { height: 100px; overflow: hidden; line-height: calc(100 * 9.5%); margin-bottom: 50px; }
+
+.contact-us form .contact-us-message:focus { line-height: 0.8125rem; }
 
 * { box-sizing: border-box; font-family: "Montserrat", sans-serif; line-height: 1.42857143; }
 
