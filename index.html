@@ -807,11 +807,11 @@
         </div>
       </div>
     </section>
-    
-    <section>
+
+    <section id="contact-us">
       <h3 class="title">contact us</h3>
       <h4 class="subtitle">our agency located in melbourne, australia</h4>
-      <div class="container"> 
+      <div class="container">
         <div class="contact-us">
           <form class="row">
             <input class="contact-us-name" type="text" id="name" name="name" placeholder="NAME">
@@ -820,19 +820,29 @@
 
             <input class="contact-us-subject" type="text" id="subject" name="subject" placeholder="SUBJECT">
 
-            <textarea class="contact-us-message" type="text" id="message" name="message" placeholder="MESSAGE"></textarea>
+            <textarea class="contact-us-message" type="text" id="message" name="message"
+              placeholder="MESSAGE"></textarea>
 
             <button type="submit" class="btn btn--center">send message</button>
           </form>
         </div>
       </div>
     </section>
-
+    <div class="map--wrapper">
+      <div id="map" class="map"></div>
+      <div class="container map-adress--wrapper">
+        <div class="map-address">
+          <div class="map-address-box"></div>
+        </div>
+      </div>
+    </div>
   </main>
   <script src="./src/vendor/glide/glide.min.js"></script>
   <script src="./src/vendor/filter/isotope.pkgd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="./js/script-compiled.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhqK9gaV-5FaVQQcujnY4A1tksDNk7uKo&callback=initMap"></script>
 </body>
 
 </html>

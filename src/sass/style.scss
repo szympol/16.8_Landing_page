@@ -25,7 +25,9 @@
   font-family: $default-font;
   line-height: 1.42857143;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0 auto;
   max-width: 100%;

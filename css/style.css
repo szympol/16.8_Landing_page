@@ -656,7 +656,19 @@ template { display: none; }
 
 .contact-us form .contact-us-message:focus { line-height: 0.8125rem; }
 
+.map--wrapper { position: relative; height: 40vh; }
+
+.map { height: 100%; width: 100%; position: absolute; z-index: 1; }
+
+.map-adress--wrapper { z-index: 99; position: relative; }
+
+.map-address { z-index: 99; position: absolute; left: 0; right: 0; }
+
+.map-address-box { height: 100%; width: 50%; background: white; margin: 30px 0; padding: 30px; }
+
 * { box-sizing: border-box; font-family: "Montserrat", sans-serif; line-height: 1.42857143; }
+
+html { scroll-behavior: smooth; }
 
 body { margin: 0 auto; max-width: 100%; }
 
