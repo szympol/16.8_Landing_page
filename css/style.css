@@ -662,7 +662,7 @@ template { display: none; }
 
 .map-adress--wrapper { z-index: 99; position: relative; }
 
-.map-address { z-index: 99; position: absolute; left: 0; right: 0; }
+.map-address { z-index: 99; position: absolute; left: 30px; right: 60px; }
 
 .map-address-box { height: 100%; width: 50%; background: white; margin: 30px 0; padding: 30px; }
 
