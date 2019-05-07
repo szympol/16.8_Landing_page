@@ -77,7 +77,57 @@
 .map-address-box {
   height: 100%;
   width: 50%;
-  background: white;
-  margin: 30px 0;
+  background: $background3;
+  margin: 25px 0;
   padding: 30px;
+  @include breakpoint(xs) {
+    width: 75%;
+    margin: 20px 0;
+  }
+}
+
+.map-address-box {
+  .row {
+    align-items: center;
+    div[class^="col"] {
+      margin-bottom: 10px;
+    }
+  }
+  i[class^="fa"] {
+    font-size: 0.75rem;
+    width: 1.5rem;
+    text-align: center;
+    line-height: 0.9rem;
+    padding: 0.3125rem;
+    border-radius: 50%;
+    color: $background3;
+    background: $color3;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background: $color4;
+    }
+    &:active,
+    &:focus {
+      background: $background1;
+    }
+  }
+}
+.map-address-box--text {
+  font-size: 0.75rem;
+  color: $color3;
+  @include breakpoint(xs) {
+    font-size: 0.625rem;
+  }
+  @include breakpoint(sm) {
+    font-size: 0.625rem;
+  }
+}
+.map-address-box--icons {
+  @include breakpoint(xs) {
+    display: none;
+  }
+  @include breakpoint(sm) {
+    display: none;
+  }
 }

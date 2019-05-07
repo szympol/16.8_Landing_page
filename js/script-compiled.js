@@ -384,3 +384,21 @@ window.initMap = function () {
 
   var marker = new google.maps.Marker({ position: manchester, map: map });
 };
+
+// scroll to top
+
+var scrollToTop = document.querySelector('.scrollToTop');
+
+window.onscroll = function () {
+  return scrollFunction();
+};
+
+var scrollFunction = function scrollFunction() {
+  return document.body.scrollTop > 110 || document.documentElement.scrollTop > 110 ? scrollToTop.style.display = 'block' : scrollToTop.style.display = 'none';
+};
+
+// When the user clicks on the button, scroll to the top of the document
+scrollToTop.addEventListener('click', function () {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+});

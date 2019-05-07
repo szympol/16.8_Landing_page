@@ -335,6 +335,16 @@ template { display: none; }
 
 .glide__bullets--marginBottomCustomer { bottom: 0rem; }
 
+.scrollToTop { display: none; position: fixed; bottom: 3.125rem; left: 3.125rem; z-index: 9999; cursor: pointer; }
+
+@media (max-width: 576px) { .scrollToTop { bottom: 0.125rem; left: 0.125rem; } }
+
+@media (min-width: 577px) and (max-width: 767px) { .scrollToTop { bottom: 0.125rem; left: 0.125rem; } }
+
+.scrollToTop i { font-size: 2.25rem; color: #b88b58; transition: all 0.3s ease-in-out; }
+
+.scrollToTop i:hover { transform: scale(1.2); }
+
 /* Sections */
 .navbar { background-color: #000; width: 100%; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; text-transform: uppercase; font-weight: bold; }
 
@@ -664,7 +674,29 @@ template { display: none; }
 
 .map-address { z-index: 99; position: absolute; left: 30px; right: 60px; }
 
-.map-address-box { height: 100%; width: 50%; background: white; margin: 30px 0; padding: 30px; }
+.map-address-box { height: 100%; width: 50%; background: #fff; margin: 25px 0; padding: 30px; }
+
+@media (max-width: 576px) { .map-address-box { width: 75%; margin: 20px 0; } }
+
+.map-address-box .row { -ms-flex-align: center; align-items: center; }
+
+.map-address-box .row div[class^="col"] { margin-bottom: 10px; }
+
+.map-address-box i[class^="fa"] { font-size: 0.75rem; width: 1.5rem; text-align: center; line-height: 0.9rem; padding: 0.3125rem; border-radius: 50%; color: #fff; background: #aeaeae; cursor: pointer; transition: all 0.3s ease-in-out; }
+
+.map-address-box i[class^="fa"]:hover { background: #b88b58; }
+
+.map-address-box i[class^="fa"]:active, .map-address-box i[class^="fa"]:focus { background: #000; }
+
+.map-address-box--text { font-size: 0.75rem; color: #aeaeae; }
+
+@media (max-width: 576px) { .map-address-box--text { font-size: 0.625rem; } }
+
+@media (min-width: 577px) and (max-width: 767px) { .map-address-box--text { font-size: 0.625rem; } }
+
+@media (max-width: 576px) { .map-address-box--icons { display: none; } }
+
+@media (min-width: 577px) and (max-width: 767px) { .map-address-box--icons { display: none; } }
 
 * { box-sizing: border-box; font-family: "Montserrat", sans-serif; line-height: 1.42857143; }
 
