@@ -698,6 +698,20 @@ template { display: none; }
 
 @media (min-width: 577px) and (max-width: 767px) { .map-address-box--icons { display: none; } }
 
+footer i[class^="fa"] { font-size: 1.25rem; width: 2.5rem; text-align: center; line-height: 1.875rem; padding: 0.3125rem; margin-bottom: 0.3125rem; border-radius: 50%; background: #373737; color: #fff; cursor: pointer; transition: all 0.3s ease-in-out; }
+
+footer i[class^="fa"]:hover { background: #b88b58; }
+
+footer i[class^="fa"]:active, footer i[class^="fa"]:focus { background: #000; }
+
+footer .footer-icons--wrapper { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-pack: justify; justify-content: space-between; padding-right: 15px; }
+
+footer .footer-icons--wrapper .footer-copyright { font-size: 0.875rem; color: #fff; }
+
+footer .footer-text { color: #7e7e7e; font-size: 0.75rem; padding: 0 15px; }
+
+footer .footer-subscription { width: 100%; height: 100%; padding-left: 15px; background-color: #373737; position: relative; }
+
 * { box-sizing: border-box; font-family: "Montserrat", sans-serif; line-height: 1.42857143; }
 
 html { scroll-behavior: smooth; }
@@ -721,3 +735,5 @@ section { padding: 60px 0; background-color: #f7f7f7; }
 .section--whiteBackground { background: #fff; }
 
 .section--smallerPadding { padding: 30px 0; }
+
+footer { padding: 30px 0; background: #000; }

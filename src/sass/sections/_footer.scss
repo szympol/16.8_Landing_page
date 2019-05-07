@@ -1,0 +1,46 @@
+footer {
+  i[class^="fa"] {
+    font-size: 1.25rem;
+    width: 2.5rem;
+    text-align: center;
+    line-height: 1.875rem;
+    padding: 0.3125rem;
+    margin-bottom: 0.3125rem;
+    border-radius: 50%;
+    background: $background4;
+    color: $background3;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background: $color4;
+    }
+
+    &:active,
+    &:focus {
+      background: $background1;
+    }
+  }
+  .footer-icons--wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 15px;
+    .footer-copyright {
+      font-size: 0.875rem;
+      color: $color2;
+    }
+  }
+  .footer-text {
+    color: $color8;
+    font-size: 0.75rem;
+    padding: 0 15px;
+  }
+  .footer-subscription {
+    width: 100%;
+    height: 100%;
+    padding-left: 15px;
+    background-color: $background4;
+    position: relative;
+  }
+}

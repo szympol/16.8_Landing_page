@@ -19,6 +19,7 @@
 @import "./sections/some-facts";
 @import "./sections/tell-about-us";
 @import "./sections/contact-us";
+@import "./sections/footer";
 
 * {
   box-sizing: border-box;
@@ -75,4 +76,9 @@ section {
 }
 .section--smallerPadding {
   padding: 30px 0;
+}
+
+footer {
+  padding: 30px 0;
+  background: $background1;
 }
