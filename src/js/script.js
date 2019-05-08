@@ -7,7 +7,6 @@ const menu = document.querySelector('.hamburger');
 const navbarWrapper = document.getElementById('navbar-wrapper');
 const navbarSections = document.getElementById('navbar-sections');
 const navbarSectionsElements = navbarSections.querySelectorAll('li');
-const navbarSectionsElementsLinks = navbarSections.querySelectorAll('li a');
 
 const classesNavbarWrapper = navbarWrapper.classList;
 let ifHasNavbarWrapperForMobileView;
@@ -81,7 +80,7 @@ for (let i = 0; i < navbarSectionsElements.length; i++) {
 let glide = new Glide('.hero', {
   type: 'carousel',
   hoverpause: false,
-  autoplay: false,
+  autoplay: 6000,
   perView: 1,
   gap: 0
 });
@@ -91,7 +90,7 @@ glide.mount();
 let glideTeam = new Glide('.our-team', {
   type: 'carousel',
   hoverpause: true,
-  autoplay: false,
+  autoplay: 6000,
   perView: 3,
   gap: 30,
   startAt: 0,
@@ -102,7 +101,7 @@ let glideTeam = new Glide('.our-team', {
     },
     991: {
       perView: 2,
-      autoplay: false
+      autoplay: 5000
     }
   }
 });
@@ -112,7 +111,7 @@ glideTeam.mount();
 let glideHappyClients = new Glide('.happy-clients', {
   type: 'carousel',
   hoverpause: true,
-  autoplay: false,
+  autoplay: 6000,
   perView: 1,
   startAt: 0
 });
@@ -122,7 +121,7 @@ glideHappyClients.mount();
 let glidePremium = new Glide('.premium', {
   type: 'carousel',
   hoverpause: true,
-  autoplay: false,
+  autoplay: 6000,
   perView: 1,
   startAt: 0
 });
@@ -448,3 +447,14 @@ scrollToTop.addEventListener('click', () => {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 });
+
+// close nav on mobile view when a user scrolls down
+
+window.onscroll = () => scrollToggleMenu();
+
+let scrollToggleMenu = () =>
+  document.body.scrollTop > 110 ||
+  (document.documentElement.scrollTop > 110 &&
+    navbarWrapper.classList.contains('navbar-wrapper--mobile'))
+    ? toggleMenu()
+    : null;
