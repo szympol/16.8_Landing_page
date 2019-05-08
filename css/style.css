@@ -698,6 +698,12 @@ template { display: none; }
 
 @media (min-width: 577px) and (max-width: 767px) { .map-address-box--icons { display: none; } }
 
+@media (max-width: 576px) { footer .footer-main-row { -ms-flex-direction: column-reverse; flex-direction: column-reverse; -ms-grid-column-align: center; justify-items: center; }
+  footer .footer-main-row .footer-text { margin-top: 30px; margin-bottom: 30px; } }
+
+@media (min-width: 577px) and (max-width: 767px) { footer { -ms-flex-direction: column-reverse; flex-direction: column-reverse; -ms-grid-column-align: center; justify-items: center; }
+  footer .footer-text { margin-top: 30px; margin-bottom: 30px; } }
+
 footer i[class^="fa"] { font-size: 1.25rem; width: 2.5rem; text-align: center; line-height: 1.875rem; padding: 0.3125rem; margin-bottom: 0.3125rem; border-radius: 50%; background: #373737; color: #fff; cursor: pointer; transition: all 0.3s ease-in-out; }
 
 footer i[class^="fa"]:hover { background: #b88b58; }
@@ -710,7 +716,22 @@ footer .footer-icons--wrapper .footer-copyright { font-size: 0.875rem; color: #f
 
 footer .footer-text { color: #7e7e7e; font-size: 0.75rem; padding: 0 15px; }
 
-footer .footer-subscription { width: 100%; height: 100%; padding-left: 15px; background-color: #373737; position: relative; }
+footer .footer-subscription { width: 100%; height: 100%; padding: 60px; background-color: #373737; }
+
+@media (min-width: 768px) and (max-width: 991px) { footer .footer-subscription { padding: 20px; } }
+
+@media (min-width: 992px) { footer .footer-subscription { padding: 60px; } }
+
+footer .footer-subscription .footer-subscription-email { margin-bottom: 30px; padding: 15px 0px; width: 100%; font-size: 0.8125rem; outline: none; border: none; border-bottom: 2px solid #aeaeae; color: #aeaeae; background: transparent; transition: all 0.2s ease-in-out; }
+
+footer .footer-subscription .footer-subscription-email:hover, footer .footer-subscription .footer-subscription-email:active, footer .footer-subscription .footer-subscription-email:focus { border-bottom: 2px solid #000; }
+
+footer .footer-subscription .footer-subscription-email:-ms-input-placeholder { text-align: center; }
+
+footer .footer-subscription .footer-subscription-email::placeholder { text-align: center; }
+
+@media (max-width: 576px) { footer .footer-subscription .footer-subscription-email { border-bottom: 1.5px solid #aeaeae; }
+  footer .footer-subscription .footer-subscription-email:hover, footer .footer-subscription .footer-subscription-email:active, footer .footer-subscription .footer-subscription-email:focus { border-bottom: 1.5px solid #000; } }
 
 * { box-sizing: border-box; font-family: "Montserrat", sans-serif; line-height: 1.42857143; }
 
