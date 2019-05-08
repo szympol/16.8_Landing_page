@@ -389,7 +389,7 @@ window.initMap = function () {
 var scrollToTop = document.querySelector('.scrollToTop');
 
 window.onscroll = function () {
-  return scrollFunction();
+  return scrollFunction() && scrollToggleMenu();
 };
 
 var scrollFunction = function scrollFunction() {
@@ -403,10 +403,6 @@ scrollToTop.addEventListener('click', function () {
 });
 
 // close nav on mobile view when a user scrolls down
-
-window.onscroll = function () {
-  return scrollToggleMenu();
-};
 
 var scrollToggleMenu = function scrollToggleMenu() {
   return document.body.scrollTop > 110 || document.documentElement.scrollTop > 110 && navbarWrapper.classList.contains('navbar-wrapper--mobile') ? toggleMenu() : null;

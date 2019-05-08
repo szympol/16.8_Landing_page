@@ -435,7 +435,7 @@ window.initMap = function() {
 
 let scrollToTop = document.querySelector('.scrollToTop');
 
-window.onscroll = () => scrollFunction();
+window.onscroll = () => scrollFunction() && scrollToggleMenu();
 
 let scrollFunction = () =>
   document.body.scrollTop > 110 || document.documentElement.scrollTop > 110
@@ -449,8 +449,6 @@ scrollToTop.addEventListener('click', () => {
 });
 
 // close nav on mobile view when a user scrolls down
-
-window.onscroll = () => scrollToggleMenu();
 
 let scrollToggleMenu = () =>
   document.body.scrollTop > 110 ||
