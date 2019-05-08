@@ -405,5 +405,5 @@ scrollToTop.addEventListener('click', function () {
 // close nav on mobile view when a user scrolls down
 
 var scrollToggleMenu = function scrollToggleMenu() {
-  return document.body.scrollTop > 110 || document.documentElement.scrollTop > 110 && navbarWrapper.classList.contains('navbar-wrapper--mobile') ? toggleMenu() : null;
+  return document.body.scrollTop > 110 || document.documentElement.scrollTop > 110 && navbarWrapper.classList.contains('navbar-wrapper--mobile') ? removeMobileToggle() : null;
 };

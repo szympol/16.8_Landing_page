@@ -454,5 +454,5 @@ let scrollToggleMenu = () =>
   document.body.scrollTop > 110 ||
   (document.documentElement.scrollTop > 110 &&
     navbarWrapper.classList.contains('navbar-wrapper--mobile'))
-    ? toggleMenu()
+    ? removeMobileToggle()
     : null;
