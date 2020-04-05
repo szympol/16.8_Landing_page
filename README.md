@@ -1,4 +1,4 @@
-[<img src="https://github.com/szympol/16.8_Landing_page/blob/master/design/zadanie-awax.jpg?raw=true" align="right" alt="landing page" width="40%">](https://github.com/szympol/16.8_Landing_page/)
+[<img src="https://github.com/szympol/Awax-landing-page-slicing/blob/master/design/zadanie-awax.jpg?raw=true" align="right" alt="landing page" width="40%">](https://github.com/szympol/Awax-landing-page-slicing/)
 
 # Awax landing page slicing
 
@@ -8,11 +8,11 @@ Slicing a project of a website from PSD to fully Responsive Website with JS code
 - usage of external libraries,
 - and a lot of fun while implementation.
 
-Based on [PSD Awax template](https://github.com/szympol/16.8_Landing_page/blob/master/design/zadanie-awax.jpg).
+Based on [PSD Awax template](https://github.com/szympol/Awax-landing-page-slicing/blob/master/design/zadanie-awax.jpg).
 
 ## Getting Started
 
-- [View project online](https://szympol.github.io/16.8_Landing_page/)
+- [View project online](https://szympol.github.io/Awax-landing-page-slicing/)
 
 Please follow instructions below, if you are willing to run the project locally.
 
@@ -27,7 +27,7 @@ Please copy and paste below commands to your Git terminal step by step to get a 
 Download a repository:
 
 ```node
-git clone git@github.com:szympol/16.8_Landing_page.git landingPage
+git clone git@github.com:szympol/Awax-landing-page-slicing.git landingPage
 ```
 
 Go to the project working directory:
